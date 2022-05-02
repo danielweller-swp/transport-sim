@@ -4,18 +4,20 @@ In this repository, you can find a simple transport simulator written in Python.
 
 ## Installing the dependencies
 
-In the `simulator/` directory,
-
 ```
 pip install -r requirements.txt
 ```
 
 ## Running the tests
 
-In the `simulator/` directory,
-
 ```
 python -m unittest
+```
+
+## Running the simulator
+
+```
+python -m simulator
 ```
 
 ## Checking out the Jupyter Notebook

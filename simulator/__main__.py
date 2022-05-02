@@ -1,6 +1,6 @@
-from simulator import Location, Map, Road, MovementModel, simulate
-from data import generate_map_from_data, generate_mean_movement_model_from_data, load_data, generate_random_movement_model_from_data
-from monte_carlo import simulate_monte_carlo
+from .simulator import Location, Map, Road, MovementModel, simulate
+from .data import generate_map_from_data, generate_mean_movement_model_from_data, load_data, generate_random_movement_model_from_data
+from .monte_carlo import simulate_monte_carlo
 
 class DurationDecisionMetric:
    def get_metric(self, r: Road, m: MovementModel) -> float:
