@@ -108,7 +108,7 @@ def simulate(map: Map, start: Location, end: Location, movement_model: MovementM
     visited = []
 
     while not queue.empty():
-        (clock, trip) = queue.get()
+        (current_metric, trip) = queue.get()
 
         if trip.location in visited:
             continue
@@ -125,7 +125,7 @@ def simulate(map: Map, start: Location, end: Location, movement_model: MovementM
                 continue
 
             metric = decision_metric.get_metric(road, movement_model)
-            total_metric = clock + metric
+            total_metric = current_metric + metric
             next_hop = _Trip(destination, trip)
             queue.put((total_metric, next_hop))
 
